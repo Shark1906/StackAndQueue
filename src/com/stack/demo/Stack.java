@@ -19,6 +19,21 @@ public class Stack {
 		top = newNode;
 	}
 	
+	public int peek() {
+		System.out.println(top.key);
+		return top.key;
+	}
+	
+	public int pop() {
+		if(top == null) {
+			System.out.println("List is Empty");
+			return 0;
+		}
+		Node temp = top;
+		top = temp.next;
+		return temp.key;
+	}
+	
 	public void print() {
 		Node temp = top;
 		
